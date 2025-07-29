@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 import { useEffect,useState,Link } from "react"
-import { EIP6963EventNames, isPreviouslyConnectedProvider } from "../../config"
+import { EIP6963EventNames, LOCAL_STORAGE_KEYS, isPreviouslyConnectedProvider } from "../../config"
 import  WalletButton from "../functions/WalletButton"
 
 function NavBar() {
