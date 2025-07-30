@@ -137,7 +137,6 @@ function NavBar() {
                 ):(
                   <div>
                   {Array.from(injectedProviders).map(
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     ([_, { info, provider }]) => (
                       
                       <WalletButton
