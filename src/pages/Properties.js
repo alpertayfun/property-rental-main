@@ -12,6 +12,7 @@ import CountDown from "../components/functions/CountDown";
 // import framer motion
 import { motion } from "framer-motion";
 import AnimationTitles from "../components/functions/AnimationTitles";
+  
 
 function Properties() {
   // Active on select a tab

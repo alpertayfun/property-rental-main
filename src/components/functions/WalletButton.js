@@ -7,12 +7,13 @@ const WalletButton = ({ walletDetails, handleConnect, isConneted }) => {
       className="flex"
       disabled={isConneted}
     >
-      <img
+      {/* <img
         className="w-5 h-5 rounded"
         src={walletDetails.info.icon}
         alt={walletDetails.info.name}
-      />
-      <span>{walletDetails.info.name}</span>
+      /> 
+      <span>{walletDetails.info.name}</span>*/}
+      <span>Connect Wallet</span>
       {isConneted}
     </Button>
   )

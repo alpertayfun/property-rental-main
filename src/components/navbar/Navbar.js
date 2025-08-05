@@ -8,6 +8,11 @@ import "./navbar.css";
 import { useEffect,useState,Link } from "react"
 import { EIP6963EventNames, LOCAL_STORAGE_KEYS, isPreviouslyConnectedProvider } from "../../config"
 import  WalletButton from "../functions/WalletButton"
+import { Address, Web3 } from 'web3';
+
+
+//https://mainnet.infura.io/v3/923066e0e55748398c41b5afcb234167
+
 
 function NavBar() {
 
@@ -63,9 +68,11 @@ function NavBar() {
   async function handleConnectProvider(selectedProviderDetails) {
     const { provider, info } = selectedProviderDetails
     try {
+      	const [balances, setBalances] = useState<Map<string>>(new Map());
       const accounts = await provider.request({
         method: "eth_requestAccounts"
       })
+
       const chainId = await provider.request({ method: "eth_chainId" })
       setConnection({
         providerUUID: info.uuid,
